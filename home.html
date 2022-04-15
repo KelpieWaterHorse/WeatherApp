@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherhome</title>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+ 
+<script src="app.js" defer></script>
+
+</head>
+<body>
+    
+    <ion-app>
+        <ion-content>
+
+        <ion-tabs id="weatherapp">
+
+          
+
+            <ion-tab tab="home">
+
+               
+               
+            <ion-list>
+
+                <ion-header>
+
+                    <ion-toolbar>
+
+                        <ion-label color="Primary"  class="center">
+
+                         <h1 fullscreen class="ion-padding" id="lbl-head">Aberdeen</h1>
+
+                        </ion-label>
+
+                    </ion-toolbar>
+
+                </ion-header>
+
+                    <ion-item>
+                        
+
+
+                        <ion-grid style="height: 100%">
+                            <ion-row justify-content-center align-items-center style="height: 100%">
+                             <ion-card id = "login-card">
+                                <form >
+
+                       
+                           
+                            <ion-label fullscreen class="ion-padding">
+                                <h2>Current Weather:</h2>
+                               
+                                    <ion-label  >
+
+                                        <h1 id="lbl-currentWeahter"></h1>
+
+                                    </ion-label>
+                                
+                                <h2>Current Air-Pollution:</h2>
+
+                                <ion-label  >
+
+                                    <h1 id="lbl-currentAir"></h1>
+
+                                </ion-label>
+                               
+                            </ion-label>
+                       
+
+                        </form>
+                  
+                </ion-card>
+                </ion-row>
+                </ion-grid>
+
+
+
+                </ion-item>
+
+        
+
+            <ion-item>
+                        
+
+                <ion-card>
+                   
+                    <ion-card-content>    
+                        <ion-item>
+                            <ion-label position = "floating">Enter City or Town</ion-label>
+                            <ion-input type = "string" id = "lbl-item-name"></ion-input>
+ 
+                        </ion-item>
+
+                        <ion-button id="btn-find">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </ion-button>
+                        <ion-button id="btn-add">
+                            <ion-icon name="add-outline"></ion-icon>
+                        </ion-button>
+
+                        <ion-list id = "fav-output">
+
+                        </ion-list>
+
+                    </ion-card-content>    
+               
+
+                </ion-card>
+
+        </ion-item>
+
+        </ion-list>
+
+    
+        
+
+            </ion-tab>
+
+            <ion-tab tab="long">
+
+               
+               
+                <ion-list>
+    
+                    <ion-label id="lbl-head" class="center">
+    
+                    <h1 fullscreen class="ion-padding" id="longForcasteTitle">Aberdeen</h1>
+    
+                    </ion-label>
+    
+                  
+                    <ion-item>
+
+                        <ion-grid style="height: 100%">
+
+                            <ion-row>
+
+                                <ion-card id = "card-1">
+
+                                    <ion-label fullscreen class="ion-padding">
+                                        
+                                        <h2 id="Forecast-current-day">Today</h2>
+                                        
+                                        <h2>Current Weather:</h2>
+                                       
+                                        <ion-label>
+
+                                            <h1  id="Forecast-Current-Weather">Sunny</h1>
+
+                                        </ion-label>
+                                        
+                                        <h2>Current Temperature (C):</h2>
+        
+                                        <ion-label>
+
+                                            <h1 id="Forecast-Current-Temp">Low</h1>
+
+                                        </ion-label>
+    
+                                    </ion-label>
+
+                                </ion-card>
+
+                            </ion-row>
+
+                        </ion-grid> 
+
+                    </ion-item>
+    
+            
+
+            <ion-item>
+
+                <ion-grid style="height: 100%">
+
+                    <ion-row >
+
+                        <ion-card id = "card-1">
+
+                            <ion-label fullscreen class="ion-padding">
+                        
+                                <h2 id="Forecast-day2">Day 2</h2>
+                        
+                                <h2>Forecast Weather:</h2>
+                                <ion-label>
+                                    <h1 id="Forecast-Weather-day2">Sunny</h1>
+                                </ion-label>
+                        
+                                <h2>Forecast Temperature (C):</h2>
+
+                                <ion-label>
+                                    <h1 id="Forecast-Temp-day2">Low</h1>
+                                </ion-label>
+
+                            </ion-label>
+                        </ion-card>
+
+                    </ion-row>
+
+                </ion-grid> 
+
+            </ion-item>
+
+            <ion-item>
+
+                <ion-grid style="height: 100%">
+
+                    <ion-row >
+
+                        <ion-card id = "card-1">
+
+                            <ion-label fullscreen class="ion-padding">
+                        
+                                <h2 id="Forecast-day3">Day 3</h2>
+                        
+                                <h2>Forecast Weather:</h2>
+                                <ion-label>
+                                    <h1 id="Forecast-Weather-day3">Sunny</h1>
+                                </ion-label>
+                        
+                                <h2>Forecast Temperature (C):</h2>
+
+                                <ion-label>
+                                    <h1 id="Forecast-Temp-day3">Low</h1>
+                                </ion-label>
+
+                            </ion-label>
+                        </ion-card>
+
+                    </ion-row>
+
+                </ion-grid> 
+
+            </ion-item>
+
+        </ion-list>
+    
+
+            </ion-tab>   
+
+
+
+
+
+
+
+
+
+
+            <ion-tab tab="historical">
+
+               
+               
+               
+    
+                    <ion-label id="lbl-head" class="center">
+    
+                    <h1 fullscreen class="ion-padding">Aberdeen</h1>
+                    <h2 fullscreen class="ion-padding">Historical Forecast</h2>
+    
+                    </ion-label>
+    
+                        <ion-item>
+                            
+    
+    
+                            <ion-grid style="height: 100%">
+                                <ion-row justify-content-center align-items-center style="height: 100%">
+                                 <ion-card id = "card-1">
+                                    <form >
+    
+                           
+                               
+                                <ion-label fullscreen class="ion-padding">
+                                    
+                                    <h2>Yesterday</h2>
+                                    
+                                    <h2>Weather:</h2>
+                                   
+                                    <h2>Air-Pollution:</h2>
+    
+                                </ion-label>
+                           
+    
+                                    </form>
+                      
+                                </ion-card>
+                            </ion-row>
+                        </ion-grid> 
+    
+                    </ion-item>
+    
+                
+
+             <ion-item>
+    
+                <ion-grid style="height: 100%">
+                    <ion-row justify-content-center align-items-center style="height: 100%">
+                     <ion-card id = "card-1">
+                        <form >
+
+               
+                   
+                    <ion-label fullscreen class="ion-padding">
+                        
+                        <h2>day 2</h2>
+                        
+                        <h2>Weather:</h2>
+                        
+                        <h2>Air-Pollution:</h2>
+                       
+                    </ion-label>
+               
+
+                    </form>
+          
+                    </ion-card>
+                </ion-row>
+            </ion-grid>      
+
+    </ion-item>
+    
+    <ion-item>
+                            
+    
+    
+    <ion-grid style="height: 100%">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+         <ion-card id = "card-1">
+            <form >
+
+   
+       
+        <ion-label fullscreen class="ion-padding">
+            
+            <h2>day 3</h2>
+            
+            <h2> Weather:</h2>                
+            
+            <h2>Air-Pollution:</h2>
+           
+        </ion-label>
+   
+
+        </form>
+
+        </ion-card>
+    </ion-row>
+</ion-grid>      
+
+</ion-item>
+
+
+
+<ion-item>
+    
+    <ion-grid style="height: 100%">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+         <ion-card id = "card-1">
+            <form >
+
+   
+       
+        <ion-label fullscreen class="ion-padding">
+            
+            <h2>day 4</h2>
+            
+            <h2>Weather:</h2>
+                       
+            <h2>Air-Pollution:</h2>
+           
+        </ion-label>
+   
+
+        </form>
+
+        </ion-card>
+    </ion-row>
+</ion-grid>      
+
+</ion-item>
+
+<ion-item>
+    
+    <ion-grid style="height: 100%">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+         <ion-card id = "card-1">
+            <form >
+
+   
+       
+        <ion-label fullscreen class="ion-padding">
+            
+            <h2>day 5</h2>
+            
+            <h2>Weather:</h2>
+                       
+            <h2>Air-Pollution:</h2>
+           
+        </ion-label>
+   
+
+        </form>
+
+        </ion-card>
+    </ion-row>
+</ion-grid>  
+
+
+
+</ion-item>
+    
+            </ion-tab>   
+
+
+
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button tab="long">
+                    <ion-icon name="sunny-outline"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="home">
+                   
+                    <ion-icon name="home-outline"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="historical">
+                   
+                    <ion-icon name="calendar-outline"></ion-icon>
+                </ion-tab-button>
+
+                        
+            </ion-tab-bar>
+
+        </ion-tabs>
+
+    </ion-content>
+
+    </ion-app>
+
+</body>
+</html>
